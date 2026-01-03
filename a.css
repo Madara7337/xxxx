@@ -1,4 +1,23 @@
-.holi { color:red, font-size: 52px;}
-p  { color:red, font-size: 52px;}
-div  { color:red, font-size: 52px;}
+/* Tamaño base del documento */
+html {
+  font-size: 12pt;
+}
 
+/* Párrafos */
+p {
+  font-size: 10pt;
+  line-height: 1.4;
+}
+
+/* Títulos */
+h1 {
+  font-size: 24pt;
+}
+
+h2 {
+  font-size: 18pt;
+}
+
+h3 {
+  font-size: 14pt;
+}
