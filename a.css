@@ -1,23 +1,118 @@
-/* Tamaño base del documento */
+/* ===============================
+   CONFIGURACIÓN DE PÁGINA
+   =============================== */
+
+@page {
+  size: A4;
+  margin: 2.5cm;
+
+  @top-center {
+    content: "Reporte Anual 2026";
+    font-size: 9pt;
+  }
+
+  @bottom-right {
+    content: "Página " counter(page);
+    font-size: 9pt;
+  }
+}
+
+/* ===============================
+   ESTILOS GENERALES
+   =============================== */
+
 html {
-  font-size: 12pt;
+  font-size: 11pt;
 }
 
-/* Párrafos */
-p {
-  font-size: 10pt;
-  line-height: 1.4;
+body {
+  font-family: "Times New Roman", serif;
+  font-size: 11pt;
+  line-height: 1.5;
+  color: #000;
 }
 
-/* Títulos */
-h1 {
-  font-size: 24pt;
+/* ===============================
+   TÍTULOS
+   =============================== */
+
+.document-title {
+  font-size: 26pt;
+  text-align: center;
+  margin-bottom: 0.5cm;
 }
 
-h2 {
-  font-size: 18pt;
-}
-
-h3 {
+.subtitle {
   font-size: 14pt;
+  text-align: center;
+  margin-bottom: 2cm;
+}
+
+.chapter-title {
+  font-size: 20pt;
+  margin-top: 1.5cm;
+  margin-bottom: 0.5cm;
+}
+
+.section-title {
+  font-size: 14pt;
+  margin-top: 1cm;
+}
+
+/* ===============================
+   TEXTO
+   =============================== */
+
+p {
+  font-size: 11pt;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.note {
+  font-size: 9pt;
+  font-style: italic;
+  margin-top: 0.5cm;
+}
+
+/* ===============================
+   TABLAS
+   =============================== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10pt;
+  margin-top: 1cm;
+}
+
+th {
+  font-size: 11pt;
+  font-weight: bold;
+  border-bottom: 1pt solid #000;
+  padding: 6pt;
+}
+
+td {
+  font-size: 10pt;
+  padding: 6pt;
+  border-bottom: 0.5pt solid #ccc;
+}
+
+/* ===============================
+   NOTAS LEGALES
+   =============================== */
+
+.footnote {
+  font-size: 8pt;
+  margin-top: 2cm;
+  text-align: center;
+}
+
+/* ===============================
+   SALTOS DE PÁGINA
+   =============================== */
+
+.chapter {
+  page-break-before: always;
 }
