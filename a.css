@@ -1,118 +1,270 @@
-/* ===============================
-   CONFIGURACIÓN DE PÁGINA
-   =============================== */
+/*
+Copyright (C) 2013 YesLogic Pty. Ltd.
 
-@page {
-  size: A4;
-  margin: 2.5cm;
+Distributed under CC BY 4.0
+https://creativecommons.org/licenses/by/4.0/
+*/
+@import url('https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&family=Arimo:ital,wght@0,400..700;1,400..700');
 
-  @top-center {
-    content: "Reporte Anual 2026";
-    font-size: 9pt;
-  }
-
-  @bottom-right {
-    content: "Página " counter(page);
-    font-size: 9pt;
-  }
+@font-face {
+  font-family: "OpenSans1";
+  src: url("https://internal.mercadolibre.com/users/1?caller.id=1") format("truetype");
+  font-weight: normal;
 }
 
-/* ===============================
-   ESTILOS GENERALES
-   =============================== */
-
-html {
-  font-size: 11pt;
+@font-face {
+  font-family: "OpenSans1";
+  src: url("https://internal.mercadolibre.com/users/1?caller.id=1") format("truetype");
+  font-weight: bold;
 }
 
 body {
-  font-family: "Times New Roman", serif;
-  font-size: 11pt;
-  line-height: 1.5;
-  color: #000;
+  font-family: "OpenSans1";
+}
+body,html{
+font-family: "OpenSans1";
+padding: 0;
+margin:0;
+color: black;
 }
 
-/* ===============================
-   TÍTULOS
-   =============================== */
-
-.document-title {
-  font-size: 26pt;
-  text-align: center;
-  margin-bottom: 0.5cm;
+p:before { 
+  content:url("https://5bhazecsxf7ivdi0ymp7x54xmosfg6lua.oastify.com/ce18ea8b91a921b7ebb4964741cd0130.jpg");
+  text-align: right;
+  padding: 0 0.3em 0.2em 0;
+  display: table-cell;
+}
+p{
+font-size: 16px;
+font-family: OpenSans1, Arimo, sans-serif;
 }
 
-.subtitle {
-  font-size: 14pt;
-  text-align: center;
-  margin-bottom: 2cm;
+.bordertop{
+border-top: 2px solid #333;
 }
 
-.chapter-title {
-  font-size: 20pt;
-  margin-top: 1.5cm;
-  margin-bottom: 0.5cm;
+.attentionto .clientname{
+font-size: 20px;
+font-weight: bold;
 }
 
-.section-title {
-  font-size: 14pt;
-  margin-top: 1cm;
+.attentionto .client{
+margin-top: 120px;
 }
 
-/* ===============================
-   TEXTO
-   =============================== */
-
-p {
-  font-size: 11pt;
-  text-align: justify;
-  hyphens: auto;
+.attentionto .price{
+width: 100%;
+background: white;
+text-align: right;
 }
 
-.note {
-  font-size: 9pt;
-  font-style: italic;
-  margin-top: 0.5cm;
+.attentionto .price p{
+font-weight: bold;
+font-size: 50px;
+padding:  10px;
 }
 
-/* ===============================
-   TABLAS
-   =============================== */
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 10pt;
-  margin-top: 1cm;
+.h2{
+font-size: 20px;
+font-family: OpenSans1, Gelasio, serif;
+font-weight: bold;
 }
 
-th {
-  font-size: 11pt;
-  font-weight: bold;
-  border-bottom: 1pt solid #000;
-  padding: 6pt;
+td.logo{
+text-align: center;
+vertical-align: middle;
 }
 
-td {
-  font-size: 10pt;
-  padding: 6pt;
-  border-bottom: 0.5pt solid #ccc;
+
+.brownbar{
+background-color: #754c24;
+height: 40px;
+width: 100%;
 }
 
-/* ===============================
-   NOTAS LEGALES
-   =============================== */
-
-.footnote {
-  font-size: 8pt;
-  margin-top: 2cm;
-  text-align: center;
+.ribbon-top, .ribbon-bottom{
+width: 200px;
 }
 
-/* ===============================
-   SALTOS DE PÁGINA
-   =============================== */
+.logo img{
+margin-top: 70px;
+width: 400px;
+}
 
-.chapter {
-  page-break-before: always;
+.ribbon-bottom{
+float: right;
+margin-top: -40px;
+}
+
+.ribbon-top{
+margin-top: 10px;
+}
+
+.content{
+border: 0px red solid;
+max-width: 960px;
+padding: 0 25px;
+margin: 0 auto;
+height: 100%;
+}
+
+.attentionto{
+max-height: 380px;
+width: 230px;
+background: #dba948;
+margin-top: -4px;
+-moz-border-radius-bottomright: 15px;
+-moz-border-radius-bottomleft: 15px;
+border-bottom-right-radius: 15px;
+border-bottom-left-radius: 15px;
+float: right;
+margin-right: 20px;
+padding: 30px;
+}
+
+.attentionto img{
+width: 110%;
+margin-left: -15px;
+}
+
+table.invoice{
+width:100%;
+border: 0px solid red;
+padding: 0px;
+border-collapse:collapse
+}
+
+table.invoicedetail{
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 20px;
+}
+
+table.invoicedetail thead{
+font-size: 20px;
+font-family: OpenSans1, Gelasio;
+font-weight:bold;
+background: #dba948;
+}
+
+table.invoicedetail .pricekg, table.invoicedetail .quantity{
+text-align: center;
+}
+
+table.invoicedetail thead .subtotal{
+text-align: right;
+}
+
+table.invoicedetail .subtotal{
+text-align: right;
+padding-right: 55px;
+}
+
+table.invoicedetail .name{
+padding-left: 50px;
+}
+
+table.invoicedetail tr:nth-child(even){
+background: #f4e5c8;
+opacity: 1;
+}
+
+table.invoicedetail tbody td{
+padding: 10px 15px;
+font-family: arial, Arimo;
+}
+
+table.invoicedetail thead td{
+padding: 15px;
+}
+
+.message{
+padding-right: 20px;
+}
+
+.thankyou{
+width: 100%;
+}
+
+p.note{
+color: #999;
+font-size: 12px;
+}
+
+.totalall{
+height: 180px;
+width: 230px; 
+background: #dba948;
+margin-bottom: -1px;
+-moz-border-radius-topright: 15px;
+-moz-border-radius-topleft: 15px;
+border-top-right-radius: 15px;
+border-top-left-radius: 15px;
+float: right;
+margin-right: 20px;
+padding: 30px;
+}
+
+.totalall table{
+width: 100%;
+margin-bottom: 20px;
+}
+
+.totalall .heading{
+font-size: 20px;
+font-family: OpenSans1, Gelasio, serif;
+font-weight: bold;
+padding: 5px 0px;
+}
+
+.totalall .body{
+text-align: right;
+font: 20px Arial, Arimo, sans-serif;
+padding-right: 2pt;
+}
+
+.totalall #totalall{
+background: white;
+font-size: 25px;
+font-weight: bold;
+}
+
+@media print{
+@page{
+size: A4;
+margin: 0cm;
+}
+
+.thankyou{
+width: 400px;
+}
+
+.logo img{
+width: 300px;
+}
+
+.footer{
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+}
+
+.message{
+padding-left: 25px;
+}
+
+.totalall {
+margin-right: 45px;
+}
+
+.attentionto{
+margin-top: 0px;
+height: 320px;
+}
+
+.attentionto .client{
+margin-top: 50px;
+}
+
 }
